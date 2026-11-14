@@ -254,12 +254,12 @@
         <!-- 1. Теоретичний блок -->
         <div id="theory" class="tab-content active">
             <div class="theory-card">
-                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">ax² + bx + c = 0</span>, де <span class="math">a, b, c</span> залежать від параметра (або <span class="math">a</span> є параметром).
+                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">Ax² + Bx + C = 0</span>, де <span class="math">A, B, C</span> залежать від параметра (або <span class="math">A</span> є параметром).
             </div>
             <div class="theory-card">
                 <strong>Алгоритм дослідження:</strong><br>
-                1. Перевірити випадок, коли старший коефіцієнт дорівнює нулю (рівняння стає лінійним).<br>
-                2. Якщо <span class="math">a ≠ 0</span>, знайти дискримінант <span class="math">D = b² - 4ac</span>.<br>
+                1. Перевірити випадок, коли старший коефіцієнт A дорівнює нулю (рівняння стає лінійним).<br>
+                2. Якщо <span class="math">A ≠ 0</span>, знайти дискримінант <span class="math">D = B² - 4AC</span>.<br>
                 3. Розглянути випадки: <span class="math">D < 0</span> (немає коренів), <span class="math">D = 0</span> (один корінь), <span class="math">D > 0</span> (два корені).<br>
                 4. Записати відповідь залежно від значень параметра.
             </div>
