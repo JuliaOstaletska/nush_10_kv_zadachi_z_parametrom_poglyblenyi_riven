@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Урок 5 • Квадратні рівняння з параметрами</title>
+    
+    <!-- Підключення MathJax для рендерингу формул -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
     <style>
         * {
             margin: 0;
@@ -203,6 +208,7 @@
             padding: 1.5rem;
             color: #1a3a5e;
             line-height: 1.7;
+            overflow-x: auto;
         }
 
         .solution-content p {
@@ -235,7 +241,7 @@
 <body>
 
     <div class="lesson-container">
-        <a href="https://juliaostaletska.github.io/nush_10_kv_zadachi_z_parametrom_poglyblenyi_riven/" class="back-link">← Повернутися до курсу</a>
+        <a href="index.html" class="back-link">← Повернутися до курсу</a>
         
         <div class="lesson-header">
             <h1>Урок 5. Особливості розв'язування квадратних рівнянь з параметрами</h1>
@@ -254,24 +260,39 @@
         <!-- 1. Теоретичний блок -->
         <div id="theory" class="tab-content active">
             <div class="theory-card">
-                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">Ax² + Bx + C = 0</span>, де <span class="math">A, B, C</span> залежать від параметра (або <span class="math">A</span> є параметром).
+                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">ax² + bx + c = 0</span>, де <span class="math">a, b, c</span> залежать від параметра (або <span class="math">a</span> є параметром).
             </div>
             <div class="theory-card">
                 <strong>Алгоритм дослідження:</strong><br>
-                1. Перевірити випадок, коли старший коефіцієнт A дорівнює нулю (рівняння стає лінійним).<br>
-                2. Якщо <span class="math">A ≠ 0</span>, знайти дискримінант <span class="math">D = B² - 4AC</span>.<br>
+                1. Перевірити випадок, коли старший коефіцієнт дорівнює нулю (рівняння стає лінійним).<br>
+                2. Якщо <span class="math">a ≠ 0</span>, знайти дискримінант <span class="math">D = b² - 4ac</span>.<br>
                 3. Розглянути випадки: <span class="math">D < 0</span> (немає коренів), <span class="math">D = 0</span> (один корінь), <span class="math">D > 0</span> (два корені).<br>
                 4. Записати відповідь залежно від значень параметра.
+            </div>
+            
+            <!-- Новий матеріал про теорему Вієта -->
+            <div class="theory-card">
+                Для квадратних рівнянь з параметром другого типу під час розв'язування можна використовувати <strong>теорему Вієта</strong>. Пригадаємо її:
+            </div>
+            <div class="theory-card">
+                <strong>Якщо \(x_1\) та \(x_2\) – корені зведеного квадратного рівняння \(x^2 + px + q = 0\),</strong><br>
+                то \(x_1 + x_2 = -p\), \(x_1 \cdot x_2 = q\).
+            </div>
+            <div class="theory-card">
+                <strong>Якщо \(x_1\) та \(x_2\) – корені незведеного квадратного рівняння \(ax^2 + bx + c = 0\),</strong><br>
+                то \(x_1 + x_2 = -\frac{b}{a}\), \(x_1 \cdot x_2 = \frac{c}{a}\).
+            </div>
+            <div class="theory-card">
+                Рівності виражають залежність суми і добутку коренів квадратного рівняння від коефіцієнтів і працюють лише у разі наявності коренів квадратного рівняння. Отже, для квадратних рівнянь з параметром обов'язково потрібно перевіряти за допомогою дискримінанта кількість коренів.
             </div>
         </div>
 
         <!-- 2. Розв'яжемо разом -->
         <div id="together" class="tab-content">
             <div class="task-block">
-                <div class="task-title">📌 Задача 1</div>
-
-
-<p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                <div class="task-title">📌 Приклад 1</div>
+                
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
                     Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
                     <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² + 2x + a = 0.</span>
                 </p>
@@ -287,33 +308,39 @@
                         
                         <p>2) \(D \geqslant 0\), тобто \(4 - 4a \geqslant 0\); \(a \leqslant 1\). Тоді</p>
                         <p>\[ x_{1,2} = \frac{-2 \pm \sqrt{4 - 4a}}{2}. \]</p>
- <p>Зауважимо, що \(\sqrt{4 - 4a} = \sqrt{4(1 - a)} = \sqrt{4} \cdot \sqrt{1 - a} = 2\sqrt{1 - a}\) за умови, що \(a \leqslant 1\). Остаточно отримаємо:</p>
+                        
+                        <p>Зауважимо, що \(\sqrt{4 - 4a} = \sqrt{4(1 - a)} = \sqrt{4} \cdot \sqrt{1 - a} = 2\sqrt{1 - a}\) за умови, що \(a \leqslant 1\). Остаточно отримаємо:</p>
                         <p>\[ x_{1,2} = \frac{-2 \pm 2\sqrt{1 - a}}{2} = \frac{2(-1 \pm \sqrt{1 - a})}{2} = -1 \pm \sqrt{1 - a}. \]</p>
                         
                         <p><em>Відповідь:</em> якщо \(a \leqslant 1\), то \(x_{1,2} = -1 \pm \sqrt{1 - a}\);</p>
                         <p>якщо \(a > 1\), то рівняння не має розв'язків.</p>
-                        
-                        < <p>Зауважимо, що \(\sqrt{4 - 4a} = \sqrt{4(1 - a)} = \sqrt{4} \cdot \sqrt{1 - a} = 2\sqrt{1 - a}\) за умови, що \(a \leqslant 1\). Остаточно отримаємо:</p>
-                        <p>\[ x_{1,2} = \frac{-2 \pm 2\sqrt{1 - a}}{2} = \frac{2(-1 \pm \sqrt{1 - a})}{2} = -1 \pm \sqrt{1 - a}. \]</p>
-                        
-                        <p><em>Відповідь:</em> якщо \(a \leqslant 1\), то \(x_{1,2} = -1 \pm \sqrt{1 - a}\);</p>
-                        <p>якщо \(a > 1\), то рівняння не має розв'язків.</p>
-                        
-                        <p style="font-size: 0.9em; color: #5a7a9e; margin-top: 1rem; border-top: 1px solid #e1edff; padding-top: 0.8rem;">
-p style="font-size: 0.9em; color: #5a7a9e; margin-top: 1rem; border-top: 1px solid #e1edff; padding-top: 0.8rem;">
-
- </p>
                     </div>
                 </details>
+            </div>
+        </div>
 
-                
-                <!-- Завдання з фото -->
-                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
-                    Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
-                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² + 2x + a = 0.</span>
-                </p>
+        <!-- 3. Задачі для самопідготовки -->
+        <div id="self-study" class="tab-content">
+            <!-- Місце для майбутніх завдань -->
+        </div>
+    </div>
 
-                <!-- Якщо у вас є зображення, розкоментуйте та вкажіть шлях -->
-                <!-- <img src="example1.png" alt="Приклад 1 з параметром" class="task-image"> -->
-
-                <!-- Випадаючий список з розв'
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+            tablinks = document.getElementsByClassName("tab-btn");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
