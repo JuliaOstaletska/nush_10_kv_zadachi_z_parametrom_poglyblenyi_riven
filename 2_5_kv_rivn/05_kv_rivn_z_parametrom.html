@@ -260,19 +260,19 @@
         <!-- 1. Теоретичний блок -->
         <div id="theory" class="tab-content active">
             <div class="theory-card">
-                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">ax² + bx + c = 0</span>, де <span class="math">a, b, c</span> залежать від параметра (або <span class="math">a</span> є параметром).
+                <strong>Квадратне рівняння з параметром</strong> має вигляд <span class="math">Ax² + Bx + C = 0</span>, де <span class="math">A, B, C</span> залежать від параметра (або <span class="math">a</span> є параметром).
             </div>
             <div class="theory-card">
                 <strong>Алгоритм дослідження:</strong><br>
                 1. Перевірити випадок, коли старший коефіцієнт дорівнює нулю (рівняння стає лінійним).<br>
-                2. Якщо <span class="math">a ≠ 0</span>, знайти дискримінант <span class="math">D = b² - 4ac</span>.<br>
+                2. Якщо <span class="math">A ≠ 0</span>, знайти дискримінант <span class="math">D = B² - 4AC</span>.<br>
                 3. Розглянути випадки: <span class="math">D < 0</span> (немає коренів), <span class="math">D = 0</span> (один корінь), <span class="math">D > 0</span> (два корені).<br>
                 4. Записати відповідь залежно від значень параметра.
             </div>
             
             <!-- Новий матеріал про теорему Вієта -->
             <div class="theory-card">
-                Для квадратних рівнянь з параметром другого типу під час розв'язування можна використовувати <strong>теорему Вієта</strong>. Пригадаємо її:
+                Для квадратних рівнянь з параметром (здебільшого другого типу) під час розв'язування можна використовувати <strong>теорему Вієта</strong>. Пригадаємо її:
             </div>
             <div class="theory-card">
                 <strong>Якщо \(x_1\) та \(x_2\) – корені зведеного квадратного рівняння \(x^2 + px + q = 0\),</strong><br>
@@ -290,7 +290,7 @@
         <!-- 2. Розв'яжемо разом -->
         <div id="together" class="tab-content">
             <div class="task-block">
-                <div class="task-title">📌 Приклад 1</div>
+                <div class="task-title">📌 Задача 1</div>
                 
                 <p style="margin-bottom: 1rem; font-size: 1.05rem;">
                     Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
@@ -314,6 +314,27 @@
                         
                         <p><em>Відповідь:</em> якщо \(a \leqslant 1\), то \(x_{1,2} = -1 \pm \sqrt{1 - a}\);</p>
                         <p>якщо \(a > 1\), то рівняння не має розв'язків.</p>
+                    </div>
+                </details>                          
+            </div>
+                             <div class="task-block">
+                <div class="task-title">📌 Задача 2</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">ax² + (1 - 2a)x + a - 2 = 0.</span>
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p><strong>1. Випадок \(a = 0\):</strong> Рівняння набуває вигляду \(x - 2 = 0\), звідси \(x = 2\).</p>
+                        <p><strong>2. Випадок \(a \neq 0\):</strong> Маємо квадратне рівняння. Знайдемо дискримінант:</p>
+                        <p>\[ D = (1 - 2a)^2 - 4 \cdot a \cdot (a - 2) = 1 - 4a + 4a^2 - 4a^2 + 8a = 4a + 1. \]</p>
+                        <p>Розглянемо підвипадки:</p>
+                        <p>а) \(D < 0\), тобто \(4a + 1 < 0 \Rightarrow a < -\frac{1}{4}\). Коренів немає.</p>
+                        <p>б) \(D = 0\), тобто \(a = -\frac{1}{4}\). Один корінь: \(x = -\frac{b}{2a} = -\frac{1 - 2(-\frac{1}{4})}{2(-\frac{1}{4})} = -\frac{1.5}{-0.5} = 3\).</p>
+                        <p>в) \(D > 0\), тобто \(a > -\frac{1}{4}\) (і \(a \neq 0\)). Два корені:</p>
+                        <p>\[ x_{1,2} = \frac{-(1 - 2a) \pm \sqrt{4a + 1}}{2a} = \frac{2a - 1 \pm \sqrt{4a + 1}}{2a}. \]</p>
+                        <p><em>Відповідь:</em> якщо \(a < -\frac{1}{4}\) — коренів немає; якщо \(a = -\frac{1}{4}\) — \(x = 3\); якщо \(a = 0\) — \(x = 2\); якщо \(a > -\frac{1}{4}, a \neq 0\) — \(x_{1,2} = \frac{2a - 1 \pm \sqrt{4a + 1}}{2a}\).</p>
                     </div>
                 </details>
             </div>
