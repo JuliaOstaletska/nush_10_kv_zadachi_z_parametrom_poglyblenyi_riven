@@ -323,6 +323,134 @@
                     </div>
                 </details>
             </div>
+
+               <!-- Задача 3 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 3</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a² + a - 2)x² + (2a² + a + 3)x + a² - 1 = 0.</span>
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p><strong>1. Перевірка старшого коефіцієнта:</strong> \(a^2 + a - 2 = 0 \Rightarrow a_1 = 1, a_2 = -2\).</p>
+                        <p>При \(a = 1\): рівняння набуває вигляду \(0 \cdot x^2 + 6x + 0 = 0 \Rightarrow 6x = 0 \Rightarrow x = 0\).</p>
+                        <p>При \(a = -2\): рівняння набуває вигляду \(0 \cdot x^2 + (8 - 2 + 3)x + 3 = 0 \Rightarrow 9x + 3 = 0 \Rightarrow x = -\frac{1}{3}\).</p>
+                        <p><strong>2. Випадок \(a \neq 1, a \neq -2\):</strong> Маємо квадратне рівняння. Знайдемо дискримінант:</p>
+                        <p>\[ D = (2a^2 + a + 3)^2 - 4(a^2 + a - 2)(a^2 - 1). \]</p>
+                        <p>Після розкриття дужок та зведення подібних доданків отримаємо:</p>
+                        <p>\[ D = 17a^2 + 14a + 17. \]</p>
+                        <p>Дискримінант квадратного тричлена відносно \(a\): \(D_a = 14^2 - 4 \cdot 17 \cdot 17 < 0\). Оскільки старший коефіцієнт \(17 > 0\), то \(D > 0\) для будь-якого \(a\).</p>
+                        <p>Отже, корені існують завжди:</p>
+                        <p>\[ x_{1,2} = \frac{-(2a^2 + a + 3) \pm \sqrt{17a^2 + 14a + 17}}{2(a^2 + a - 2)}. \]</p>
+                        <p><em>Відповідь:</em> якщо \(a = 1\) — \(x = 0\); якщо \(a = -2\) — \(x = -\frac{1}{3}\); якщо \(a \neq 1, a \neq -2\) — \(x_{1,2} = \frac{-(2a^2 + a + 3) \pm \sqrt{17a^2 + 14a + 17}}{2(a^2 + a - 2)}\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 4 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 4</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    За яких значень параметра <span class="math">a</span> корені <span class="math">x₁</span> та <span class="math">x₂</span> рівняння <span class="math">px² + (2a - 1)x + a - 1 = 0</span> (тут, ймовірно, мається на увазі <span class="math">ax²</span>, але в умові на фото <span class="math">px²</span>) задовольняють умову <span class="math">3x₁ - 4x₂ = 11</span>?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p><em>Примітка: в умові на фото ймовірна друкарська помилка, і рівняння має вигляд \(ax^2 + ...\). Розв'яжемо для \(ax^2\).</em></p>
+                        <p>За теоремою Вієта: \(x_1 + x_2 = -\frac{2a - 1}{a}\), \(x_1 \cdot x_2 = \frac{a - 1}{a}\).</p>
+                        <p>Маємо систему: \(\begin{cases} 3x_1 - 4x_2 = 11 \\ x_1 + x_2 = \frac{1 - 2a}{a} \end{cases}\)</p>
+                        <p>З другого рівняння \(x_1 = \frac{1 - 2a}{a} - x_2\). Підставимо в перше:</p>
+                        <p>\(3(\frac{1 - 2a}{a} - x_2) - 4x_2 = 11 \Rightarrow \frac{3 - 6a}{a} - 7x_2 = 11 \Rightarrow x_2 = \frac{3 - 17a}{7a}\).</p>
+                        <p>Тоді \(x_1 = \frac{1 - 2a}{a} - \frac{3 - 17a}{7a} = \frac{7 - 14a - 3 + 17a}{7a} = \frac{3a + 4}{7a}\).</p>
+                        <p>Підставимо в добуток: \(x_1 x_2 = \frac{3a + 4}{7a} \cdot \frac{3 - 17a}{7a} = \frac{a - 1}{a}\).</p>
+                        <p>\((3a + 4)(3 - 17a) = 49a(a - 1) \Rightarrow 9a - 51a^2 + 12 - 68a = 49a^2 - 49a \Rightarrow 100a^2 + 10a - 12 = 0 \Rightarrow 50a^2 + 5a - 6 = 0\).</p>
+                        <p>\(D = 25 - 4 \cdot 50 \cdot (-6) = 1225 = 35^2\).</p>
+                        <p>\(a_1 = \frac{-5 + 35}{100} = 0.3\); \(a_2 = \frac{-5 - 35}{100} = -0.4\).</p>
+                        <p>Перевіримо дискримінант вихідного рівняння: \(D = (2a - 1)^2 - 4a(a - 1) = 4a^2 - 4a + 1 - 4a^2 + 4a = 1 > 0\). Корені існують завжди.</p>
+                        <p><em>Відповідь:</em> \(a = 0.3\) або \(a = -0.4\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 5 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 5</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    За яких значень параметра <span class="math">a</span> рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a² - 6a + 5)x² - (a² - 3a + 2)x + a² - a = 0</span> <br>
+                    має більше, ніж два корені?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>Квадратне рівняння не може мати більше двох коренів. Рівняння матиме більше двох коренів (тобто безліч), якщо воно перетворюється на тотожність \(0 = 0\).</p>
+                        <p>Це можливо, якщо всі коефіцієнти дорівнюють нулю:</p>
+                        <p>\(\begin{cases} a^2 - 6a + 5 = 0 \\ a^2 - 3a + 2 = 0 \\ a^2 - a = 0 \end{cases}\)</p>
+                        <p>Розв'яжемо кожне: 1) \(a_1 = 1, a_2 = 5\); 2) \(a_1 = 1, a_2 = 2\); 3) \(a_1 = 0, a_2 = 1\).</p>
+                        <p>Спільним коренем для всіх трьох рівнянь є \(a = 1\).</p>
+                        <p><em>Відповідь:</em> \(a = 1\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 6 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 6</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    За яких значень параметра <span class="math">a</span> рівняння <span class="math">x² - 2ax + a + 1 = 0</span> та <span class="math">x² + ax - a - 1 = 0</span> мають спільний дійсний корінь?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>Нехай \(x_0\) — спільний корінь. Тоді:</p>
+                        <p>\(\begin{cases} x_0^2 - 2ax_0 + a + 1 = 0 \\ x_0^2 + ax_0 - a - 1 = 0 \end{cases}\)</p>
+                        <p>Віднімемо від першого рівняння друге:</p>
+                        <p>\(-3ax_0 + 2a + 2 = 0 \Rightarrow 2a + 2 = 3ax_0\).</p>
+                        <p>1) Якщо \(a = 0\), то \(2 = 0\) — неможливо, отже \(a \neq 0\).</p>
+                        <p>2) \(x_0 = \frac{2a + 2}{3a}\). Підставимо в друге рівняння:</p>
+                        <p>\((\frac{2a + 2}{3a})^2 + a(\frac{2a + 2}{3a}) - a - 1 = 0\)</p>
+                        <p>Після спрощення отримаємо: \(4a^2 + 8a + 4 + 6a^2 + 6a - 9a^2 - 9a = 0 \Rightarrow a^2 + 5a + 4 = 0\).</p>
+                        <p>\(a_1 = -1, a_2 = -4\).</p>
+                        <p>Перевіримо, чи є ці корені дійсними для обох рівнянь (дискримінанти \(\geqslant 0\)):</p>
+                        <p>Для \(a=-1\): \(D_1 = 4 - 4(0) = 4 > 0\); \(D_2 = 1 - 4(0) = 1 > 0\).</p>
+                        <p>Для \(a=-4\): \(D_1 = 64 - 4(-3) = 76 > 0\); \(D_2 = 16 - 4(3) = 4 > 0\).</p>
+                        <p><em>Відповідь:</em> \(a = -1\) або \(a = -4\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 7 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 7</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для яких значень параметра <span class="math">a</span> рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a + 1)x² + x√(12 + a - a²) + 3 = 0</span> має:<br>
+                    1) єдиний корінь;<br>
+                    2) два різних дійсних корені?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>ОДЗ підкореневого виразу: \(12 + a - a^2 \geqslant 0 \Rightarrow a^2 - a - 12 \leqslant 0 \Rightarrow (a - 4)(a + 3) \leqslant 0 \Rightarrow a \in [-3; 4]\).</p>
+                        
+                        <p><strong>1) Єдиний корінь:</strong></p>
+                        <p>а) Рівняння лінійне: \(a + 1 = 0 \Rightarrow a = -1\). При \(a=-1\): \(0 \cdot x^2 + x\sqrt{12 - 1 - 1} + 3 = 0 \Rightarrow x\sqrt{10} + 3 = 0 \Rightarrow x = -\frac{3}{\sqrt{10}}\) — один корінь.</p>
+                        <p>б) Рівняння квадратне, але \(D = 0\). \(D = (\sqrt{12 + a - a^2})^2 - 4(a+1)\cdot 3 = 12 + a - a^2 - 12a - 12 = -a^2 - 11a = -a(a + 11)\).</p>
+                        <p>\(D = 0 \Rightarrow a = 0\) або \(a = -11\). Умова \(a = -11\) не задовольняє ОДЗ. При \(a = 0\): \(x = -\frac{\sqrt{12}}{2} = -\sqrt{3}\) — один корінь.</p>
+                        
+                        <p><strong>2) Два різних дійсних корені:</strong></p>
+                        <p>Потрібно, щоб \(a + 1 \neq 0\) (тобто \(a \neq -1\)) та \(D > 0\).</p>
+                        <p>\(-a(a + 11) > 0 \Rightarrow a \in (-11; 0)\). З урахуванням ОДЗ \([-3; 4]\) та \(a \neq -1\), отримуємо \(a \in [-3; -1) \cup (-1; 0)\).</p>
+                        
+                        <p><em>Відповідь:</em> 1) \(a = -1, a = 0\); 2) \(a \in [-3; -1) \cup (-1; 0)\).</p>
+                    </div>
+                </details>
+            </div>
+
+        </div>              
+                            
         </div>
 
         <!-- 3. Задачі для самопідготовки -->
