@@ -145,14 +145,6 @@
             gap: 0.5rem;
         }
 
-        .task-image {
-            max-width: 100%;
-            border-radius: 0.5rem;
-            border: 1px solid #e1edff;
-            margin-bottom: 1rem;
-            display: block;
-        }
-
         /* Випадаючий список (Details) */
         details {
             background: #f4f9ff;
@@ -259,11 +251,9 @@
         
         <!-- 1. Теоретичний блок -->
         <div id="theory" class="tab-content active">
-                      
-            <!-- Новий матеріал про теорему Вієта -->
-           
+            <div class="theory-card" style="background: transparent; border-left: none; padding: 0 0 1rem 0;">
                 Для квадратних рівнянь з параметром другого типу під час розв'язування можна використовувати <strong>теорему Вієта</strong>. Пригадаємо її:
-          
+            </div>
             <div class="theory-card">
                 <strong>Якщо \(x_1\) та \(x_2\) – корені зведеного квадратного рівняння \(x^2 + px + q = 0\),</strong><br>
                 то \(x_1 + x_2 = -p\), \(x_1 \cdot x_2 = q\).
@@ -279,39 +269,128 @@
 
         <!-- 2. Розв'яжемо разом -->
         <div id="together" class="tab-content">
+            
+            <!-- Задача 8 -->
             <div class="task-block">
-                <div class="task-title">📌 Приклад 1</div>
-                
+                <div class="task-title">📌 Задача 1</div>
                 <p style="margin-bottom: 1rem; font-size: 1.05rem;">
-                    Для всіх значень параметра <span class="math">a</span> розв'яжіть рівняння <br>
-                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² + 2x + a = 0.</span>
+                    За яких значень параметра \(a\) добуток коренів рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² + (a - 2)x + a² + 2a = 0</span> дорівнює 3?
                 </p>
-
                 <details>
                     <summary>Показати розв'язання</summary>
                     <div class="solution-content">
-                        <p><em>Розв'язання.</em> Задане рівняння є квадратним для всіх значень параметра \(a\). Знайдемо дискримінант цього квадратного рівняння.</p>
-                        <p>\[ D = 4 - 4a. \]</p>
-                        <p>Далі необхідно розглянути випадки: 1) \(D < 0\); 2) \(D \geqslant 0\).</p>
-                        
-                        <p>1) \(D < 0\), тобто \(4 - 4a < 0\); \(4a > 4\); \(a > 1\). Тоді рівняння не має розв'язків.</p>
-                        
-                        <p>2) \(D \geqslant 0\), тобто \(4 - 4a \geqslant 0\); \(a \leqslant 1\). Тоді</p>
-                        <p>\[ x_{1,2} = \frac{-2 \pm \sqrt{4 - 4a}}{2}. \]</p>
-                        
-                        <p>Зауважимо, що \(\sqrt{4 - 4a} = \sqrt{4(1 - a)} = \sqrt{4} \cdot \sqrt{1 - a} = 2\sqrt{1 - a}\) за умови, що \(a \leqslant 1\). Остаточно отримаємо:</p>
-                        <p>\[ x_{1,2} = \frac{-2 \pm 2\sqrt{1 - a}}{2} = \frac{2(-1 \pm \sqrt{1 - a})}{2} = -1 \pm \sqrt{1 - a}. \]</p>
-                        
-                        <p><em>Відповідь:</em> якщо \(a \leqslant 1\), то \(x_{1,2} = -1 \pm \sqrt{1 - a}\);</p>
-                        <p>якщо \(a > 1\), то рівняння не має розв'язків.</p>
+                        <p>За теоремою Вієта для рівняння \(x^2 + px + q = 0\) добуток коренів \(x_1 \cdot x_2 = q\).</p>
+                        <p>У нашому рівнянні \(q = a^2 + 2a\). За умовою \(x_1 \cdot x_2 = 3\).</p>
+                        <p>Отже, маємо рівняння: \(a^2 + 2a = 3 \Rightarrow a^2 + 2a - 3 = 0\).</p>
+                        <p>За теоремою Вієта (або через дискримінант) знаходимо корені: \(a_1 = 1, a_2 = -3\).</p>
+                        <p>Обов'язково перевіримо умову існування дійсних коренів вихідного рівняння (\(D \geqslant 0\)):</p>
+                        <p>\(D = (a - 2)^2 - 4(a^2 + 2a) = a^2 - 4a + 4 - 4a^2 - 8a = -3a^2 - 12a + 4\).</p>
+                        <p>Для \(a = 1\): \(D = -3(1) - 12(1) + 4 = -11 < 0\). Коренів немає! (Значення \(a=1\) не підходить).</p>
+                        <p>Для \(a = -3\): \(D = -3(9) - 12(-3) + 4 = -27 + 36 + 4 = 13 > 0\). Корені існують.</p>
+                        <p><em>Відповідь:</em> \(a = -3\).</p>
                     </div>
                 </details>
             </div>
+
+            <!-- Задача 9 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 2</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для якого значення параметра \(a\) сума квадратів коренів рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² - ax - a - 1 = 0</span> приймає найменше значення?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>Нехай \(x_1, x_2\) — корені. За теоремою Вієта: \(x_1 + x_2 = a\), \(x_1 \cdot x_2 = -a - 1\).</p>
+                        <p>Сума квадратів коренів: \(x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1x_2 = a^2 - 2(-a - 1) = a^2 + 2a + 2\).</p>
+                        <p>Розглянемо функцію \(f(a) = a^2 + 2a + 2\). Це парабола, вітки якої напрямлені вгору. Найменше значення досягається у вершині:</p>
+                        <p>\(a_0 = -\frac{b}{2A} = -\frac{2}{2} = -1\).</p>
+                        <p>Перевіримо, чи існують корені при \(a = -1\): \(D = (-a)^2 - 4(1)(-a - 1) = a^2 + 4a + 4 = (a + 2)^2\).</p>
+                        <p>При \(a = -1\): \(D = (-1 + 2)^2 = 1 > 0\). Корені дійсні.</p>
+                        <p><em>Відповідь:</em> \(a = -1\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 3 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 3</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для яких значень параметра \(a\) сума квадратів коренів рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a - 1)x² - 2ax + a + 4 = 0</span> дорівнює квадрату добутку цих коренів?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>Спочатку потрібно, щоб рівняння було квадратним: \(a - 1 \neq 0 \Rightarrow a \neq 1\).</p>
+                        <p>За теоремою Вієта: \(x_1 + x_2 = \frac{2a}{a - 1}\), \(x_1 \cdot x_2 = \frac{a + 4}{a - 1}\).</p>
+                        <p>Умова: \(x_1^2 + x_2^2 = (x_1 x_2)^2\).</p>
+                        <p>Ліва частина: \((x_1 + x_2)^2 - 2x_1x_2 = \left(\frac{2a}{a - 1}\right)^2 - 2\frac{a + 4}{a - 1} = \frac{4a^2 - 2(a + 4)(a - 1)}{(a - 1)^2} = \frac{2a^2 - 6a + 8}{(a - 1)^2}\).</p>
+                        <p>Права частина: \(\left(\frac{a + 4}{a - 1}\right)^2 = \frac{(a + 4)^2}{(a - 1)^2}\).</p>
+                        <p>Прирівнюємо чисельники: \(2a^2 - 6a + 8 = a^2 + 8a + 16 \Rightarrow a^2 - 14a - 8 = 0\).</p>
+                        <p>\(D = 196 - 4(1)(-8) = 196 + 32 = 228\). \(a_{1,2} = \frac{14 \pm \sqrt{228}}{2} = 7 \pm \sqrt{57}\).</p>
+                        <p>Тепер перевіримо умову існування коренів: \(D = (-2a)^2 - 4(a - 1)(a + 4) = 4a^2 - 4(a^2 + 3a - 4) = -12a + 16\).</p>
+                        <p>\(D \geqslant 0 \Rightarrow -12a + 16 \geqslant 0 \Rightarrow a \leqslant \frac{4}{3}\).</p>
+                        <p>Оскільки \(\sqrt{57} \approx 7.5\), то \(a_1 = 7 + 7.5 = 14.5\) (не підходить, бо більше 4/3), а \(a_2 = 7 - 7.5 = -0.5\) (підходить).</p>
+                        <p><em>Відповідь:</em> \(a = 7 - \sqrt{57}\).</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Задача 4 -->
+            <div class="task-block">
+                <div class="task-title">📌 Задача 4</div>
+                <p style="margin-bottom: 1rem; font-size: 1.05rem;">
+                    Для яких значень параметра \(a\) рівняння <br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">x² - (|a + 5| - |a - 5|)x + (a - 12)(a + 12) = 0</span> має два різних від'ємних корені?
+                </p>
+                <details>
+                    <summary>Показати розв'язання</summary>
+                    <div class="solution-content">
+                        <p>Розкриємо модулі. Вираз \(|a+5| - |a-5|\) поводиться по-різному залежно від \(a\). Позначимо \(S = |a+5| - |a-5|\), \(P = a^2 - 144\).</p>
+                        <p>Для того, щоб обидва корені були від'ємними, потрібно:</p>
+                        <p>1) \(D > 0\) (два різних корені);<br>
+                           2) \(x_1 + x_2 < 0\) (сума від'ємна);<br>
+                           3) \(x_1 \cdot x_2 > 0\) (добуток додатний).</p>
+                        <p>За Вієта: \(x_1 + x_2 = S\), \(x_1 \cdot x_2 = P\).</p>
+                        <p>Умова 2: \(S < 0\). Умова 3: \(P > 0 \Rightarrow a^2 - 144 > 0 \Rightarrow a \in (-\infty; -12) \cup (12; +\infty)\).</p>
+                        <p>Умова 1: \(D = S^2 - 4P > 0\). Оскільки корені мають бути дійсними і різними, а \(P>0, S<0\), то \(D\) буде автоматично більше 0, якщо \(S^2 > 4P\).</p>
+                        <p>Розглянемо \(S = |a+5| - |a-5|\). Ця функція набуває значень: 10 (при \(a \geqslant 5\)), \(2a\) (при \(-5 < a < 5\)), \(-10\) (при \(a \leqslant -5\)).</p>
+                        <p>Оскільки нам потрібно \(S < 0\), це можливо лише при \(a < 0\).</p>
+                        <p>З урахуванням \(P > 0\) (\(a < -12\)), маємо \(a < -12\). Тоді \(S = -10\).</p>
+                        <p>Перевіримо \(D > 0\): \((-10)^2 - 4(a^2 - 144) > 0 \Rightarrow 100 - 4a^2 + 576 > 0 \Rightarrow 4a^2 < 676 \Rightarrow a^2 < 169 \Rightarrow -13 < a < 13\).</p>
+                        <p>Перетинаємо умови: \(a < -12\) та \(-13 < a < 13\). Отримуємо \(a \in (-13; -12)\).</p>
+                        <p><em>Відповідь:</em> \(a \in (-13; -12)\).</p>
+                    </div>
+                </details>
+            </div>
+
         </div>
 
         <!-- 3. Задачі для самопідготовки -->
         <div id="self-study" class="tab-content">
-            <!-- Місце для майбутніх завдань -->
+            <div class="task-block" style="padding: 2rem 1.5rem;">
+                <h3 style="color: #1e4a7a; margin-bottom: 1.5rem; font-size: 1.3rem;">Задачі для самопідготовки</h3>
+                
+                <ol style="line-height: 1.8; color: #1a3a5e; padding-left: 1.5rem; font-size: 1.05rem;">
+                    <li style="margin-bottom: 1.5rem;">
+                        <p>Для яких значень параметра \(a\) один з коренів рівняння \(x^2 + ax + a + 2 = 0\) удвічі більший за другий?</p>
+                       
+                    </li>
+                    
+                    <li style="margin-bottom: 1.5rem;">
+                        <p>За яких значень параметра \(a\) різниця коренів рівняння \(x^2 + 2ax - 8 = 0\) дорівнює 6?</p>
+                       
+                    </li>
+                    
+                    <li style="margin-bottom: 1.5rem;">
+                        <p>За яких значень параметра \(a\) різниця коренів рівняння \(2x^2 - (a + 1)x + (a - 1) = 0\) дорівнює їхньому добутку?</p>
+                      
+                    </li>
+                </ol>
+            </div>
         </div>
     </div>
 
