@@ -353,23 +353,12 @@
             <div class="task-block">
                 <div class="task-title">📌 Задача 4</div>
                 <p style="margin-bottom: 1rem; font-size: 1.05rem;">
-                    За яких значень параметра <span class="math">a</span> корені <span class="math">x₁</span> та <span class="math">x₂</span> рівняння <span class="math">px² + (2a - 1)x + a - 1 = 0</span> (тут, ймовірно, мається на увазі <span class="math">ax²</span>, але в умові на фото <span class="math">px²</span>) задовольняють умову <span class="math">3x₁ - 4x₂ = 11</span>?
+                    За яких значень параметра <span class="math">a</span> корені <span class="math">x₁</span> та <span class="math">x₂</span> рівняння <span class="math">2x² + (2a - 1)x + a - 1 = 0</span> (тут, ймовірно, мається на увазі <span class="math">ax²</span>, але в умові на фото <span class="math">px²</span>) задовольняють умову <span class="math">3x₁ - 4x₂ = 11</span>?
                 </p>
                 <details>
                     <summary>Показати розв'язання</summary>
                     <div class="solution-content">
-                        <p><em>Примітка: в умові на фото ймовірна друкарська помилка, і рівняння має вигляд \(ax^2 + ...\). Розв'яжемо для \(ax^2\).</em></p>
-                        <p>За теоремою Вієта: \(x_1 + x_2 = -\frac{2a - 1}{a}\), \(x_1 \cdot x_2 = \frac{a - 1}{a}\).</p>
-                        <p>Маємо систему: \(\begin{cases} 3x_1 - 4x_2 = 11 \\ x_1 + x_2 = \frac{1 - 2a}{a} \end{cases}\)</p>
-                        <p>З другого рівняння \(x_1 = \frac{1 - 2a}{a} - x_2\). Підставимо в перше:</p>
-                        <p>\(3(\frac{1 - 2a}{a} - x_2) - 4x_2 = 11 \Rightarrow \frac{3 - 6a}{a} - 7x_2 = 11 \Rightarrow x_2 = \frac{3 - 17a}{7a}\).</p>
-                        <p>Тоді \(x_1 = \frac{1 - 2a}{a} - \frac{3 - 17a}{7a} = \frac{7 - 14a - 3 + 17a}{7a} = \frac{3a + 4}{7a}\).</p>
-                        <p>Підставимо в добуток: \(x_1 x_2 = \frac{3a + 4}{7a} \cdot \frac{3 - 17a}{7a} = \frac{a - 1}{a}\).</p>
-                        <p>\((3a + 4)(3 - 17a) = 49a(a - 1) \Rightarrow 9a - 51a^2 + 12 - 68a = 49a^2 - 49a \Rightarrow 100a^2 + 10a - 12 = 0 \Rightarrow 50a^2 + 5a - 6 = 0\).</p>
-                        <p>\(D = 25 - 4 \cdot 50 \cdot (-6) = 1225 = 35^2\).</p>
-                        <p>\(a_1 = \frac{-5 + 35}{100} = 0.3\); \(a_2 = \frac{-5 - 35}{100} = -0.4\).</p>
-                        <p>Перевіримо дискримінант вихідного рівняння: \(D = (2a - 1)^2 - 4a(a - 1) = 4a^2 - 4a + 1 - 4a^2 + 4a = 1 > 0\). Корені існують завжди.</p>
-                        <p><em>Відповідь:</em> \(a = 0.3\) або \(a = -0.4\).</p>
+                        <p><em>Відповідь:</em> \(a = 4.125\) або \(a = -2\).</p>
                     </div>
                 </details>
             </div>
@@ -426,7 +415,7 @@
                 <div class="task-title">📌 Задача 7</div>
                 <p style="margin-bottom: 1rem; font-size: 1.05rem;">
                     Для яких значень параметра <span class="math">a</span> рівняння <br>
-                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a + 1)x² + x√(12 + a - a²) + 3 = 0</span> має:<br>
+                    <span class="math" style="font-size: 1.2rem; display: inline-block; margin-top: 0.5rem;">(a + 1)x² + xsqrt{12+a-a^2} + 3 = 0</span> має:<br>
                     1) єдиний корінь;<br>
                     2) два різних дійсних корені?
                 </p>
