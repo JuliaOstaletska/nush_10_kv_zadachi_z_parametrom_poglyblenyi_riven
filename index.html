@@ -524,7 +524,25 @@
                 if (!win) {
                     window.location.href = url;
                 }
-            } else {
+            } 
+
+                // Для уроку 6 відкриваємо нову сторінку (lesson6.html)
+            
+                        // Для уроку 6 відкриваємо нову сторінку
+            if (lessonNumber === 6) {
+                // Зверніть увагу на правильний шлях та подвійне .html у назві файлу!
+                const url = '2_5_kv_rivn/06_t_vieta_u_rivn_z_parametrom.html';
+                
+                // Спроба відкрити в новій вкладці
+                const win = window.open(url, '_blank');
+                
+                // Якщо браузер заблокував нову вкладку, відкриваємо в поточній
+                if (!win) {
+                    window.location.href = url;
+                }
+            } 
+
+            else {
                 // Для інших уроків поки що показуємо повідомлення
                 alert(`🔹 Перехід до уроку ${lessonNumber}:\n«${lessonTitles[lessonNumber]}»\n\n(У реальному застосунку відкриється сторінка уроку)`);
                 console.log(`Відкрито урок ${lessonNumber}: ${lessonTitles[lessonNumber]}`);
